@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Student Attendance System</h1>
-    <form id="attendanceForm">
-        <label for="studentId">Student ID:</label>
-        <input type="text" id="studentId" required><br><br>
-        <label for="code">One-Time Code:</label>
-        <input type="text" id="code" required><br><br>
-        <button type="submit">Mark Attendance</button>
-    </form>
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+        
+        <!-- Teacher Login Form -->
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+        
+        <!-- Code Generation Form -->
+        <div id="generate-code" style="display: none;">
+            <h2>Generate Code</h2>
+            <button onclick="generateCode()">Generate One-Time Code</button>
+            <p id="code-message"></p>
+        </div>
+
+        <!-- Attendance Marking Form -->
+        <div id="mark-attendance" style="display: none;">
+            <h2>Mark Attendance</h2>
+            <input type="text" id="student-id" placeholder="Student ID" />
+            <input type="text" id="attendance-code" placeholder="Enter Code" />
+            <button onclick="markAttendance()">Mark Attendance</button>
+            <p id="attendance-message"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
