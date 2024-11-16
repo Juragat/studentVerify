@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import random
 import string
 from openpyxl import load_workbook
+from flask_cors import CORS
+CORS(app)
 
 # Initialize Flask app
 app = Flask(__name__)
